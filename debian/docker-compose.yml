@@ -31,6 +31,7 @@ services:
 
   nginx:
     image: nginx:alpine
+    container_name: invoiceninja-nginx
     restart: unless-stopped
     volumes:
       - ./nginx:/etc/nginx/conf.d:ro
