@@ -81,7 +81,6 @@ services:
 networks:
   app-network:
     driver: bridge
-networks:
   cloudflared:
     name: cloudflared
     external: true
