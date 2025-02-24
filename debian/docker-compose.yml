@@ -5,7 +5,7 @@ x-logging: &default-logging
   driver: json-file
 
 services:
-  app:
+  invoiceninja:
     build:
       context: .
     image: invoiceninja/invoiceninja-debian:${TAG:-latest}
@@ -40,7 +40,7 @@ services:
       - app-network
       - cloudflared
     depends_on:
-      - app
+      - invoiceninja
     logging: *default-logging
 
   mysql:
