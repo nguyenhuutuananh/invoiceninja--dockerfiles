@@ -10,8 +10,8 @@ services:
       context: .
     image: invoiceninja/invoiceninja-debian:${TAG:-latest}
     restart: unless-stopped
-    env_file:
-      - ./.env
+    # env_file:
+    #  - ./.env
     volumes:
       - ./.env:/var/www/html/.env
       # - ./php/php.ini:/usr/local/etc/php/conf.d/invoiceninja.ini:ro
